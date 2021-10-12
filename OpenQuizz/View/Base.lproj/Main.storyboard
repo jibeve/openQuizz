@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Balham.otf">
+            <string>Balham</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9xM-WE-Vk9" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="177" y="30" width="480" height="480"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ou sont les marsupilamis ? Ou sont-ils ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xe-Md-P4p">
+                                        <rect key="frame" x="8" y="8" width="464" height="464"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                        </variation>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Icon Error" translatesAutoresizingMaskIntoConstraints="NO" id="Fs5-SJ-bN2">
+                                        <rect key="frame" x="204" y="400" width="72" height="72"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="BSh-Bl-AGJ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="72"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="Fs5-SJ-bN2" secondAttribute="height" multiplier="1:1" id="mSK-Ni-qUK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4Xe-Md-P4p" firstAttribute="top" secondItem="9xM-WE-Vk9" secondAttribute="top" constant="8" id="0Hu-fA-rNs"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Xe-Md-P4p" secondAttribute="trailing" constant="8" id="0hY-Qm-vRd"/>
+                                    <constraint firstAttribute="width" constant="245" id="CLd-Nu-VDi">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="480"/>
+                                    </constraint>
+                                    <constraint firstItem="Fs5-SJ-bN2" firstAttribute="centerX" secondItem="9xM-WE-Vk9" secondAttribute="centerX" id="EB8-gC-CMF"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Xe-Md-P4p" secondAttribute="bottom" constant="8" id="ZJ0-oo-QPO"/>
+                                    <constraint firstItem="4Xe-Md-P4p" firstAttribute="leading" secondItem="9xM-WE-Vk9" secondAttribute="leading" constant="8" id="Zfx-kY-4Xe"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fs5-SJ-bN2" secondAttribute="bottom" constant="8" id="btz-1R-w8b"/>
+                                    <constraint firstAttribute="width" secondItem="9xM-WE-Vk9" secondAttribute="height" multiplier="1:1" id="cgN-RD-PKU"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="icon" destination="Fs5-SJ-bN2" id="N2x-oG-D7L"/>
+                                    <outlet property="label" destination="4Xe-Md-P4p" id="lea-Qs-xwJ"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-6v-Feb">
+                                <rect key="frame" x="267" y="608" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="035-4a-gcF"/>
+                                    <constraint firstAttribute="height" constant="60" id="UO9-nH-FMC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="50"/>
+                                </variation>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8bi-9P-A5I">
+                                <rect key="frame" x="398.5" y="1045.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Nj6-Mh-Zo4"/>
+                                    <constraint firstAttribute="height" constant="37" id="WiH-wl-jQF"/>
+                                </constraints>
+                                <variation key="heightClass=compact" hidden="YES"/>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zua-O3-8AP">
+                                <rect key="frame" x="217" y="984" width="400" height="160"/>
+                                <color key="backgroundColor" red="0.36053210499999999" green="0.55732876060000003" blue="0.7838869691" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="0CS-3u-AGd"/>
+                                    <constraint firstAttribute="height" constant="80" id="7vc-3Q-4P8">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="160"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="BtX-Ad-RMo"/>
+                                    <constraint firstAttribute="width" constant="200" id="XrG-zt-YTY">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="27"/>
+                                <state key="normal" title="New Game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="2im-6U-cYZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.34410935640000001" green="0.42237499360000003" blue="0.50908213849999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MyC-6v-Feb" firstAttribute="top" secondItem="4Xe-Md-P4p" secondAttribute="bottom" constant="106" id="0SQ-Hv-H0w"/>
+                            <constraint firstItem="9xM-WE-Vk9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="8DB-QM-qbA"/>
+                            <constraint firstItem="Zua-O3-8AP" firstAttribute="centerX" secondItem="MyC-6v-Feb" secondAttribute="centerX" id="BhY-8i-SUd"/>
+                            <constraint firstItem="8bi-9P-A5I" firstAttribute="centerX" secondItem="Zua-O3-8AP" secondAttribute="centerX" id="CJp-5m-W38"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zua-O3-8AP" secondAttribute="trailing" constant="30" id="CQe-RM-fh3">
+                                <variation key="heightClass=compact" constant="43"/>
+                            </constraint>
+                            <constraint firstItem="MyC-6v-Feb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="FiF-gz-h9V">
+                                <variation key="heightClass=compact" constant="91"/>
+                            </constraint>
+                            <constraint firstItem="MyC-6v-Feb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fqm-J5-JZl">
+                                <variation key="heightClass=compact" constant="739"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="MyC-6v-Feb" secondAttribute="trailing" constant="20" id="GbV-eo-AHi">
+                                <variation key="heightClass=compact" constant="37"/>
+                            </constraint>
+                            <constraint firstItem="9xM-WE-Vk9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XiR-0C-0Uz"/>
+                            <constraint firstItem="9xM-WE-Vk9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gBp-eZ-DvD"/>
+                            <constraint firstItem="Zua-O3-8AP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hTV-dg-YFo"/>
+                            <constraint firstItem="Zua-O3-8AP" firstAttribute="bottom" secondItem="9xM-WE-Vk9" secondAttribute="bottom" id="jpn-lN-8a1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zua-O3-8AP" secondAttribute="bottom" constant="30" id="n0J-Ln-hHz">
+                                <variation key="heightClass=compact" constant="71"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="MyC-6v-Feb" secondAttribute="trailing" constant="8" id="p9A-tA-0MY"/>
+                            <constraint firstItem="8bi-9P-A5I" firstAttribute="centerY" secondItem="Zua-O3-8AP" secondAttribute="centerY" id="suy-U3-uCB"/>
+                            <constraint firstItem="9xM-WE-Vk9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wG4-pG-Aoa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CQe-RM-fh3"/>
+                                <exclude reference="8DB-QM-qbA"/>
+                                <exclude reference="gBp-eZ-DvD"/>
+                                <exclude reference="FiF-gz-h9V"/>
+                                <exclude reference="GbV-eo-AHi"/>
+                                <exclude reference="p9A-tA-0MY"/>
+                                <exclude reference="BhY-8i-SUd"/>
+                                <exclude reference="jpn-lN-8a1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="CQe-RM-fh3"/>
+                                <include reference="8DB-QM-qbA"/>
+                                <exclude reference="XiR-0C-0Uz"/>
+                                <include reference="gBp-eZ-DvD"/>
+                                <exclude reference="wG4-pG-Aoa"/>
+                                <exclude reference="0SQ-Hv-H0w"/>
+                                <include reference="FiF-gz-h9V"/>
+                                <exclude reference="Fqm-J5-JZl"/>
+                                <include reference="GbV-eo-AHi"/>
+                                <exclude reference="p9A-tA-0MY"/>
+                                <include reference="BhY-8i-SUd"/>
+                                <exclude reference="hTV-dg-YFo"/>
+                                <include reference="jpn-lN-8a1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="QuestionView" destination="9xM-WE-Vk9" id="fxX-Pa-YkP"/>
+                        <outlet property="activityIndicator" destination="8bi-9P-A5I" id="k0h-hO-S4G"/>
+                        <outlet property="newGameButton" destination="Zua-O3-8AP" id="Tya-gs-lMq"/>
+                        <outlet property="scoreLabel" destination="MyC-6v-Feb" id="1xZ-TW-fZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128.05755395683454" y="34.673366834170857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon Error" width="36" height="35"/>
+    </resources>
+</document>
